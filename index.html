@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="generator" content="MarkBind 2.17.3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RepoSense - Home</title>
   <link rel="stylesheet" href="markbind/css/bootstrap.min.css">
@@ -13,8 +13,12 @@
   <link rel="stylesheet" href="markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="markbind/css/octicons.css">
-  <link rel="stylesheet" href="markbind/css/github.min.css">
-  <link rel="stylesheet" href="markbind/css/markbind.css">
+  <link rel="stylesheet" href="markbind/css/codeblock-light.min.css">
+  <link rel="stylesheet" href="markbind/css/markbind.min.css">
+  <script src="markbind/js/polyfill.min.js"></script>
+  <script src="markbind/js/vue.min.js"></script>
+  <script src="markbind/js/markbind.min.js"></script>
+  <script src="markbind/js/jquery.min.js"></script>
   <link rel="stylesheet" href="/RepoSense/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="markbind/layouts/default/styles.css">
   <link rel="icon" href="/RepoSense/favicon.ico">
@@ -43,17 +47,20 @@
     <header>
       <div class="jumbotron jumbotron-fluid text-center" style="padding-top: inherit; padding-bottom: inherit">
         <div class="container">
-          <h1 class="display-3" id="reposense">RepoSense<a class="fa fa-anchor" href="#reposense" onclick="event.stopPropagation()"></a></h1>
+          <h1 class="display-3" id="reposense"><span id="reposense" class="anchor"></span>RepoSense<a class="fa fa-anchor" href="#reposense" onclick="event.stopPropagation()"></a></h1>
           <div class="lead">
             <p>Visualize programmer activities across git repositories...
               <br><br>
               <img src="/RepoSense/images/reposenseOverview.png" width="909" alt="RepoSense overview">
-              <br><br></p>
+              <br><br>
+            </p>
           </div>
         </div>
       </div>
     </header>
     <div id="flex-body">
+
+
 
       <div id="content-wrapper">
         <div></div>
@@ -61,7 +68,7 @@
         <span id="overview">
           <p><strong>RepoSense can generate interactive visualizations of programmer activities, even across multiple repositories.</strong> It's ideal for educators and managers to get insights on programming activities of their mentees. The visualizations can be <strong>easily shared</strong> with others (e.g., as an online dashboard) and updating of the visualizations periodically <strong>can be automated</strong>.</p>
           <p>Some example insights RepoSense can provide:</p>
-          <h4 id="insights-about-the-code">
+          <h4 id="insights-about-the-code"><span id="insights-about-the-code" class="anchor"></span>
             <thumbnail circle background="#006600" font-color="white" size="50"><span aria-hidden="true" class="fas fa-code"></span></thumbnail> <span class="lead font-weight-bold text-green">Insights about the code</span><a class="fa fa-anchor" href="#insights-about-the-code" onclick="event.stopPropagation()"></a>
           </h4>
           <ul>
@@ -69,23 +76,23 @@
             <li>Which test cases were written by Kim?</li>
             <li>Which commit messages were written by Serene?</li>
           </ul>
-          <h4 id="insights-about-the-type-of-work">
+          <h4 id="insights-about-the-type-of-work"><span id="insights-about-the-type-of-work" class="anchor"></span>
             <thumbnail circle background="#006600" font-color="white" size="50"><span aria-hidden="true" class="fas fa-chart-pie"></span></thumbnail> <span class="lead font-weight-bold text-green">Insights about the type of work</span><a class="fa fa-anchor" href="#insights-about-the-type-of-work" onclick="event.stopPropagation()"></a>
           </h4>
           <ul>
-            <li>Which portion of Jacob's code was documentation?</li>
+            <li>Which portion of Jacob's code is documentation?</li>
             <li>Who hasn't written any test code yet?</li>
             <li>Which project did Jolene contribute to in the last month?</li>
           </ul>
-          <h4 id="insights-about-the-timing-of-work">
+          <h4 id="insights-about-the-timing-of-work"><span id="insights-about-the-timing-of-work" class="anchor"></span>
             <thumbnail circle background="#006600" font-color="white" size="50"><span aria-hidden="true" class="fas fa-business-time"></span></thumbnail> <span class="lead font-weight-bold text-green">Insights about the timing of work</span><a class="fa fa-anchor" href="#insights-about-the-timing-of-work" onclick="event.stopPropagation()"></a>
           </h4>
           <ul>
-            <li>Who are putting in a consistent effort?</li>
+            <li>Who is putting in the consistent effort?</li>
             <li>Who waits till the deadline to do the work?</li>
             <li>Who hasn't started any work yet?</li>
           </ul>
-          <h4 id="insights-based-on-comparisons">
+          <h4 id="insights-based-on-comparisons"><span id="insights-based-on-comparisons" class="anchor"></span>
             <thumbnail circle background="#006600" font-color="white" size="50"><span aria-hidden="true" class="fas fa-list-ol"></span></thumbnail> <span class="lead font-weight-bold text-green">Insights based on comparisons</span><a class="fa fa-anchor" href="#insights-based-on-comparisons" onclick="event.stopPropagation()"></a>
           </h4>
           <ul>
@@ -110,8 +117,10 @@
                     <p><a href="http://markbind.org"><img src="https://markbind.org/images/logo-lightbackground.png" width="150"></a></p>
                     <p>Deploy previews are powered by Netlify and Surge.</p>
                     <p><a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"></a>
-                      <a href="https://surge.sh"><img width="55px" src="https://surge.sh/images/logos/svg/surge-logo.svg"></a></p>
+                      <a href="https://surge.sh"><img width="55px" src="https://surge.sh/images/logos/svg/surge-logo.svg"></a>
+                    </p>
                   </small>
+                  <p></p>
                 </div>
                 <div class="col-sm">
                   <p><strong><strong>USER GUIDE</strong></strong></p>
@@ -141,7 +150,7 @@
                           <p><a href="/RepoSense/ug/configFiles.html">Config files format</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/usingAuthorTags.html">Using <code>@@author</code> tags</a></p>
+                          <p><a href="/RepoSense/ug/usingAuthorTags.html">Using <code class="hljs inline no-lang" v-pre>@@author</code> tags</a></p>
                         </li>
                         <li>
                           <p><a href="/RepoSense/ug/withNetlify.html">RepoSense with Netlify</a></p>
@@ -153,7 +162,7 @@
                           <p><a href="/RepoSense/ug/withTravis.html">RepoSense with Travis</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/runSh.html"><code>run.sh</code> format</a></p>
+                          <p><a href="/RepoSense/ug/runSh.html"><code class="hljs inline no-lang" v-pre>run.sh</code> format</a></p>
                         </li>
                         <li>
                           <p><a href="/RepoSense/ug/faq.html">FAQ</a></p>
@@ -205,27 +214,25 @@
             </div>
           </div>
         </div>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
       </div>
-
-
     </div>
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Tue, Jul 21, 2020, 7:18:43 PM UTC]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, Feb 2, 2021, 1:06:09 PM UTC]</small>
+      </div>
     </footer>
   </div>
 </body>
-<script src="markbind/js/vue.min.js"></script>
-<script src="markbind/js/vue-strap.min.js"></script>
 <script src="markbind/js/bootstrap-utility.min.js"></script>
-<script src="markbind/js/polyfill.min.js"></script>
-<script src="markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/RepoSense'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="markbind/js/setup.js"></script>
 <script src="markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
 
 </html>
