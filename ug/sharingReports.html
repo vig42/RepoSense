@@ -119,7 +119,7 @@
         <div class="lead">
           <p><strong>Often, you would want to share the RepoSense report with others.</strong> For example, a teacher using RepoSense for a programming class might want to share the report privately with tutors or publish it so that everyone can see it.</p>
         </div>
-        <p>The sections below explains various ways of sharing a RepoSense report.</p>
+        <p>The sections below explain various ways of sharing a RepoSense report.</p>
 
         <h3 id="share-privately"><span id="share-privately" class="anchor"></span>Share privately<a class="fa fa-anchor" href="#share-privately" onclick="event.stopPropagation()"></a></h3>
         <p>To share a RepoSense report privately, simply find a way to share the folder containing the report (by default, it will be in a folder named <code class="hljs inline no-lang" v-pre>reposense-report</code>). For example, you can zip that folder and share it with the intended recipients.</p>
@@ -222,10 +222,10 @@
                               <box>
                                 <p><strong>Examples</strong>:</p>
                                 <p>An example of a command using most parameters:<br>
-                                  <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repo https://github.com/reposense/RepoSense.git --output ./report_folder --since 31/1/2017 --until 31/12/2018 --formats java adoc xml --view --ignore-standalone-config --last-modified-date --timezone UTC+08</code>
+                                  <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repos https://github.com/reposense/RepoSense.git --output ./report_folder --since 31/1/2017 --until 31/12/2018 --formats java adoc xml --view --ignore-standalone-config --last-modified-date --timezone UTC+08</code>
                                 </p>
                                 <p>Same command as above but using most parameters in alias format:<br>
-                                  <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar -r https://github.com/reposense/RepoSense.git -o ./report_folder -s 31/1/2017 -u 31/12/2018 -f java adoc xml -v -i -l</code>
+                                  <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar -r https://github.com/reposense/RepoSense.git -o ./report_folder -s 31/1/2017 -u 31/12/2018 -f java adoc xml -v -i -l -t UTC+08</code>
                                 </p>
                               </box>
                               <p></p>
@@ -241,7 +241,7 @@
                                 </ul>
                                 <box type="info" seamless>
                                   <ul>
-                                    <li>If <code class="hljs inline no-lang" v-pre>--assets</code> is not specified, Reposense looks for assets in the <code class="hljs inline no-lang" v-pre>./assets</code> directory.
+                                    <li>If <code class="hljs inline no-lang" v-pre>--assets</code> is not specified, RepoSense looks for assets in the <code class="hljs inline no-lang" v-pre>./assets</code> directory.
                                     </li>
                                   </ul>
                                 </box>
@@ -257,7 +257,7 @@
                                 </ul>
                                 <box type="info" seamless>
                                   <ul>
-                                    <li>Cannot be used with <code class="hljs inline no-lang" v-pre>--repos</code></li>
+                                    <li>Cannot be used with <code class="hljs inline no-lang" v-pre>--repos</code>.</li>
                                     <li>If both <code class="hljs inline no-lang" v-pre>--repos</code> and <code class="hljs inline no-lang" v-pre>--config</code> are not specified, RepoSense looks for config files in the <code class="hljs inline no-lang" v-pre>./config</code> directory.
                                     </li>
                                   </ul>
@@ -267,7 +267,7 @@
                               <h3 id="formats-f"><span id="formats-f" class="anchor"></span><code class="hljs inline no-lang" v-pre>--formats</code>, <code class="hljs inline no-lang" v-pre>-f</code><a class="fa fa-anchor" href="#formats-f" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--formats LIST_OF_FORMATS</code></strong>: Specifies which file extensions to be included in the analysis.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>LIST_OF_FORMATS</code> a space-separated list of file extensions that should be included in the analysis<br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>LIST_OF_FORMATS</code> A space-separated list of file extensions that should be included in the analysis.<br>
                                   Default: all file formats</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-f</code></li>
                                 <li>Example:<code class="hljs inline no-lang" v-pre>--formats css fxml gradle</code> or <code class="hljs inline no-lang" v-pre>-f css fxml gradle</code></li>
@@ -279,7 +279,7 @@
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-h</code></li>
                               </ul>
                               <box type="info" seamless>
-                                <p>Cannot be used with any other flags
+                                <p>Cannot be used with any other flags.
                                 </p>
                               </box>
                               <p></p>
@@ -298,7 +298,7 @@
                               <p></p>
 
                               <h3 id="last-modified-date-l"><span id="last-modified-date-l" class="anchor"></span><code class="hljs inline no-lang" v-pre>--last-modified-date</code>, <code class="hljs inline no-lang" v-pre>-l</code><a class="fa fa-anchor" href="#last-modified-date-l" onclick="event.stopPropagation()"></a></h3>
-                              <p><strong><code class="hljs inline no-lang" v-pre>--last-modified-date</code></strong>: Specifies that the last modified date of each line of code should be added to <code class="hljs inline no-lang" v-pre>authorship.json</code></p>
+                              <p><strong><code class="hljs inline no-lang" v-pre>--last-modified-date</code></strong>: Specifies that the last modified date of each line of code should be added to <code class="hljs inline no-lang" v-pre>authorship.json</code>.</p>
                               <ul>
                                 <li>Default: the last modified date of each line of code will not be added to <code class="hljs inline no-lang" v-pre>authorship.json</code></li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-l</code> (lowercase L)</li>
@@ -309,7 +309,7 @@
                               <h3 id="output-o"><span id="output-o" class="anchor"></span><code class="hljs inline no-lang" v-pre>--output</code>, <code class="hljs inline no-lang" v-pre>-o</code><a class="fa fa-anchor" href="#output-o" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--output OUTPUT_DIRECTORY</code></strong>: Indicates where to save the report generated.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>OUTPUT_DIRECTORY</code> location for the generated <code class="hljs inline no-lang" v-pre>reposense-report</code> folder<br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>OUTPUT_DIRECTORY</code> The location for the generated <code class="hljs inline no-lang" v-pre>reposense-report</code> folder.<br>
                                   Default: current directory</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-o</code></li>
                                 <li>Example: <code class="hljs inline no-lang" v-pre>--output ./foo</code> or <code class="hljs inline no-lang" v-pre>-o ./foo</code> (the report will be in the <code class="hljs inline no-lang" v-pre>./foo/reposense-report</code> folder)</li>
@@ -318,7 +318,7 @@
                               <h3 id="period-p"><span id="period-p" class="anchor"></span><code class="hljs inline no-lang" v-pre>--period</code>, <code class="hljs inline no-lang" v-pre>-p</code><a class="fa fa-anchor" href="#period-p" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--period PERIOD</code></strong>: Specifies the period of analysis window.</p>
                               <ul>
-                                <li>Parameter <code class="hljs inline no-lang" v-pre>PERIOD</code>: The period of analysis window, in the format <code class="hljs inline no-lang" v-pre>nd</code> (for n days) or <code class="hljs inline no-lang" v-pre>nw</code> (for n weeks). It is used to calculate end date if only start date is specified, or calculate end date if only start date is specified.</li>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>PERIOD</code> The period of analysis window, in the format <code class="hljs inline no-lang" v-pre>nd</code> (for n days) or <code class="hljs inline no-lang" v-pre>nw</code> (for n weeks). It is used to calculate end date if only start date is specified, or calculate end date if only start date is specified.</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-p</code></li>
                                 <li>Example: <code class="hljs inline no-lang" v-pre>--period 30d</code> or <code class="hljs inline no-lang" v-pre>--period 4w</code></li>
                               </ul>
@@ -334,24 +334,25 @@
                               <h3 id="repos-r"><span id="repos-r" class="anchor"></span><code class="hljs inline no-lang" v-pre>--repos</code>, <code class="hljs inline no-lang" v-pre>-r</code><a class="fa fa-anchor" href="#repos-r" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--repos REPO_LOCATION</code></strong>: Specifies which repositories to analyze.</p>
                               <ul>
-                                <li>Parameter <code class="hljs inline no-lang" v-pre>REPO_LOCATION</code>: A list of URLs or the disk location of the git repositories to analyze, separated by spaces.</li>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>REPO_LOCATION</code> A list of URLs or the disk location of the git repositories to analyze, separated by spaces.</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-r</code></li>
                                 <li>Examples:
                                   <ul>
                                     <li><code class="hljs inline no-lang" v-pre>--repos https://github.com/reposense/RepoSense.git</code></li>
-                                    <li><code class="hljs inline no-lang" v-pre>--repos https://github.com/reposense/RepoSense.git c:/myRepose/foo/bar</code>: analyzes the two specified repos (one remote, one local) and generates one report containing details of both</li>
+                                    <li><code class="hljs inline no-lang" v-pre>--repos https://github.com/reposense/RepoSense.git c:/myRepose/foo/bar</code>: analyzes the two specified repos (one remote, one local) and generates one report containing details of both.</li>
                                   </ul>
                                 </li>
                               </ul>
                               <box type="info" seamless>
-                                <p>Cannot be used with <code class="hljs inline no-lang" v-pre>--config</code></p>
+                                <p>Cannot be used with <code class="hljs inline no-lang" v-pre>--config</code>.
+                                </p>
                               </box>
                               <p></p>
 
                               <h3 id="since-s"><span id="since-s" class="anchor"></span><code class="hljs inline no-lang" v-pre>--since</code>, <code class="hljs inline no-lang" v-pre>-s</code><a class="fa fa-anchor" href="#since-s" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--since START_DATE</code></strong>: Specifies the start date for the period to be analyzed.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>START_DATE</code> the first day of the period to be analyzed, in the format <code class="hljs inline no-lang" v-pre>DD/MM/YYYY</code><br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>START_DATE</code> The first day of the period to be analyzed, in the format <code class="hljs inline no-lang" v-pre>DD/MM/YYYY</code>.<br>
                                   Default: one month before the current date</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-s</code></li>
                                 <li>Example:<code class="hljs inline no-lang" v-pre>--since 21/10/2017</code> or <code class="hljs inline no-lang" v-pre>-s 21/10/2017</code></li>
@@ -368,7 +369,7 @@
                               <h3 id="timezone-t"><span id="timezone-t" class="anchor"></span><code class="hljs inline no-lang" v-pre>--timezone</code>, <code class="hljs inline no-lang" v-pre>-t</code><a class="fa fa-anchor" href="#timezone-t" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--timezone ZONE_ID</code></strong>: Indicates the timezone to be used for the analysis.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>ZONE_ID</code> timezones in the format <code class="hljs inline no-lang" v-pre>ZONE_ID[±hh[mm]]</code><br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>ZONE_ID</code> The timezone in the format <code class="hljs inline no-lang" v-pre>ZONE_ID[±hh[mm]]</code>.<br>
                                   Default: system's default timezone</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-t</code></li>
                                 <li>Example:<code class="hljs inline no-lang" v-pre>--timezone UTC+08</code> or <code class="hljs inline no-lang" v-pre>-t UTC-1030</code></li>
@@ -377,7 +378,7 @@
                               <h3 id="until-u"><span id="until-u" class="anchor"></span><code class="hljs inline no-lang" v-pre>--until</code>, <code class="hljs inline no-lang" v-pre>-u</code><a class="fa fa-anchor" href="#until-u" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--until END_DATE</code></strong>: Specifies the end date of the analysis period.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>END_DATE</code> The last date of the period to be analyzed, in the format <code class="hljs inline no-lang" v-pre>DD/MM/YYYY</code><br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>END_DATE</code> The last date of the period to be analyzed, in the format <code class="hljs inline no-lang" v-pre>DD/MM/YYYY</code>.<br>
                                   Default: current date</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-u</code></li>
                                 <li>Example:<code class="hljs inline no-lang" v-pre>--until 21/10/2017</code> or <code class="hljs inline no-lang" v-pre>-u 21/10/2017</code></li>
@@ -394,13 +395,13 @@
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-V</code> (upper case)</li>
                               </ul>
                               <box type="info" seamless>
-                                <p>Cannot be used with any other flags
+                                <p>Cannot be used with any other flags.
                                 </p>
                               </box>
                               <p></p>
 
                               <h3 id="view-v"><span id="view-v" class="anchor"></span><code class="hljs inline no-lang" v-pre>--view</code>, <code class="hljs inline no-lang" v-pre>-v</code><a class="fa fa-anchor" href="#view-v" onclick="event.stopPropagation()"></a></h3>
-                              <p><strong><code class="hljs inline no-lang" v-pre>--view [REPORT_FOLDER]</code></strong>: Specifies the report should be opened in the default browser.</p>
+                              <p><strong><code class="hljs inline no-lang" v-pre>--view [REPORT_FOLDER]</code></strong>: Specifies that the report should be opened in the default browser.</p>
                               <ul>
                                 <li>Parameter: <code class="hljs inline no-lang" v-pre>REPORT_FOLDER</code> Optional. If specified, no analysis will be performed and the report specified by the argument will be opened.<br>
                                   Default: <code class="hljs inline no-lang" v-pre>./reposense-report</code></li>
@@ -440,7 +441,7 @@
                         </box>
                         <p></p>
                         <box type="info" seamless>
-                          <p><strong>A value in a config file is optional to provide unless it specified as <span class="badge badge-danger">mandatory</span></strong>.
+                          <p><strong>A value in a config file is optional to provide unless it is specified as <span class="badge badge-danger">mandatory</span></strong>.
                           </p>
                         </box>
                         <p></p>
@@ -462,7 +463,7 @@
                               </tr>
                               <tr>
                                 <td>Branch</td>
-                                <td>The branch to analyze in the target repository e.g., <code class="hljs inline no-lang" v-pre>master</code>. Default: the default branch of the repo</td>
+                                <td>The branch to analyze in the target repository, e.g., <code class="hljs inline no-lang" v-pre>master</code>. Default: the default branch of the repo</td>
                               </tr>
                               <tr>
                                 <td>File formats<sup>*+</sup></td>
@@ -470,15 +471,15 @@
                               </tr>
                               <tr>
                                 <td>Ignore Glob List<sup>*+</sup></td>
-                                <td>The list of file path globs to ignore during analysis for each author. e.g., <code class="hljs inline no-lang" v-pre>test/**;temp/**</code></td>
+                                <td>The list of file path globs to ignore during analysis for each author, e.g., <code class="hljs inline no-lang" v-pre>test/**;temp/**</code></td>
                               </tr>
                               <tr>
                                 <td>Ignore standalone config</td>
-                                <td>To ignore the standalone config file (if any) in target repository, enter <strong><code class="hljs inline no-lang" v-pre>yes</code></strong>. If the cell is empty, the standalone config file in the repo (if any) will take precedence over configurations provided in the csv files.</td>
+                                <td>To ignore the standalone config file (if any) in the target repository, enter <strong><code class="hljs inline no-lang" v-pre>yes</code></strong>. If the cell is empty, the standalone config file in the repo (if any) will take precedence over configurations provided in the csv files.</td>
                               </tr>
                               <tr>
                                 <td>Ignore Commit List<sup>*+</sup></td>
-                                <td>The list of commits to ignore during analysis. For accurate results, the commits should be provided with their full hash. Additionally, a range of commits can be specified using the <code class="hljs inline no-lang" v-pre>..</code> notation e.g. <code class="hljs inline no-lang" v-pre>abc123..def456</code> (both inclusive).</td>
+                                <td>The list of commits to ignore during analysis. For accurate results, the commits should be provided with their full hash. Additionally, a range of commits can be specified using the <code class="hljs inline no-lang" v-pre>..</code> notation, e.g., <code class="hljs inline no-lang" v-pre>abc123..def456</code> (both inclusive).</td>
                               </tr>
                               <tr>
                                 <td>Ignore Authors List<sup>*+</sup></td>
@@ -497,7 +498,7 @@
                         <p></p>
 
                         <h2 id="author-config-csv"><span id="author-config-csv" class="anchor"></span><code class="hljs inline no-lang" v-pre>author-config.csv</code><a class="fa fa-anchor" href="#author-config-csv" onclick="event.stopPropagation()"></a></h2>
-                        <p>Optionally, you can use a <code class="hljs inline no-lang" v-pre>author-config.csv</code> (which should be in the same directory as <code class="hljs inline no-lang" v-pre>repo-config.csv</code> file) to provide more details about the authors to analyze (<a href="/RepoSense/ug/author-config.csv">example</a>). It should contain the following columns:</p>
+                        <p>Optionally, you can use an <code class="hljs inline no-lang" v-pre>author-config.csv</code> (which should be in the same directory as the <code class="hljs inline no-lang" v-pre>repo-config.csv</code> file) to provide more details about the authors to analyze (<a href="/RepoSense/ug/author-config.csv">example</a>). It should contain the following columns:</p>
                         <div class="table-responsive">
                           <table class="markbind-table table table-bordered table-striped">
                             <thead>
@@ -513,11 +514,11 @@
                               </tr>
                               <tr>
                                 <td>Branch</td>
-                                <td>The branch to analyze for this author e.g., <code class="hljs inline no-lang" v-pre>master</code>. Default: the author will be bound to all the repos in <code class="hljs inline no-lang" v-pre>repo-config.csv</code> that has the same repo's location, irregardless of branch</td>
+                                <td>The branch to analyze for this author, e.g., <code class="hljs inline no-lang" v-pre>master</code>. Default: the author will be bound to all the repos in <code class="hljs inline no-lang" v-pre>repo-config.csv</code> that has the same repo's location, regardless of branch.</td>
                               </tr>
                               <tr>
                                 <td>Author's GitHub ID <span class="badge badge-danger">mandatory</span></td>
-                                <td>GitHub username of the target author e.g., <code class="hljs inline no-lang" v-pre>JohnDoe</code></td>
+                                <td>GitHub username of the target author, e.g., <code class="hljs inline no-lang" v-pre>JohnDoe</code></td>
                               </tr>
                               <tr>
                                 <td>Author's Emails<sup>*</sup></td>
@@ -539,7 +540,7 @@
                           </table>
                         </div>
                         <p><sup>* <strong>Multi-value column</strong>: multiple values can be entered in this column using a semicolon <code class="hljs inline no-lang" v-pre>;</code> as the separator.</sup></p>
-                        <p>If <code class="hljs inline no-lang" v-pre>author-config.csv</code> is not given and the repo has not provide author details in a standalone config file, all the authors of the repositories within the date range specified (if any) will be analyzed.</p>
+                        <p>If <code class="hljs inline no-lang" v-pre>author-config.csv</code> is not given and the repo has not provided author details in a standalone config file, all the authors of the repositories within the date range specified (if any) will be analyzed.</p>
 
                         <h2 id="group-config-csv"><span id="group-config-csv" class="anchor"></span><code class="hljs inline no-lang" v-pre>group-config.csv</code><a class="fa fa-anchor" href="#group-config-csv" onclick="event.stopPropagation()"></a></h2>
                         <p>Optionally, you can provide a <code class="hljs inline no-lang" v-pre>group-config.csv</code>(which should be in the same directory as <code class="hljs inline no-lang" v-pre>repo-config.csv</code> file) to provide details on any custom groupings for files in specified repositories (<a href="/RepoSense/ug/group-config.csv">example</a>). It should contain the following columns:</p>
@@ -558,21 +559,21 @@
                               </tr>
                               <tr>
                                 <td>Group Name <span class="badge badge-danger">mandatory</span></td>
-                                <td>Name of the group e.g.,<code class="hljs inline no-lang" v-pre>test</code>.</td>
+                                <td>Name of the group, e.g.,<code class="hljs inline no-lang" v-pre>test</code>.</td>
                               </tr>
                               <tr>
                                 <td>Globs * <span class="badge badge-danger">mandatory</span></td>
-                                <td>The list of file path globs to include for specified group. e.g.,<code class="hljs inline no-lang" v-pre>**/test/*;**.java</code>.</td>
+                                <td>The list of file path globs to include for specified group, e.g.,<code class="hljs inline no-lang" v-pre>**/test/*;**.java</code>.</td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
                         <p><sup>* <strong>Multi-value column</strong>: multiple values can be entered in this column using a semicolon <code class="hljs inline no-lang" v-pre>;</code> as the separator.</sup></p>
                         <p>Note that a file in a given repository should only be tagged to one group. <br>
-                          e.g.: <code class="hljs inline no-lang" v-pre>example.java</code> in <code class="hljs inline no-lang" v-pre>example-repo</code> can either be in <code class="hljs inline no-lang" v-pre>test</code> group or in <code class="hljs inline no-lang" v-pre>code</code> group, but not in both <code class="hljs inline no-lang" v-pre>test</code> and <code class="hljs inline no-lang" v-pre>code</code> group. If multiple groups are specified for a given file, the latter group (i.e.: <code class="hljs inline no-lang" v-pre>code</code> group) is set for the file.</p>
+                          e.g.: <code class="hljs inline no-lang" v-pre>example.java</code> in <code class="hljs inline no-lang" v-pre>example-repo</code> can either be in the <code class="hljs inline no-lang" v-pre>test</code> group or the <code class="hljs inline no-lang" v-pre>code</code> group, but not in both <code class="hljs inline no-lang" v-pre>test</code> and <code class="hljs inline no-lang" v-pre>code</code> group. If multiple groups are specified for a given file, the latter group (i.e., <code class="hljs inline no-lang" v-pre>code</code> group) is set for the file.</p>
 
                         <h2 id="report-config-json"><span id="report-config-json" class="anchor"></span><code class="hljs inline no-lang" v-pre>report-config.json</code><a class="fa fa-anchor" href="#report-config-json" onclick="event.stopPropagation()"></a></h2>
-                        <p>You can optionally use <code class="hljs inline no-lang" v-pre>report-config.json</code> to customize report generation by providing the following information . (<a href="/RepoSense/ug/report-config.csv">example</a>)</p>
+                        <p>You can optionally use <code class="hljs inline no-lang" v-pre>report-config.json</code> to customize report generation by providing the following information. (<a href="/RepoSense/ug/report-config.csv">example</a>)</p>
                         <p><strong>Fields to provide</strong>:</p>
                         <ul>
                           <li><code class="hljs inline no-lang" v-pre>title</code>: Title of the generated report, which is also the title of the deployed dashboard. Default: &quot;RepoSense Report&quot;</li>
@@ -621,12 +622,12 @@
                             <li><code class="hljs inline no-lang" v-pre>githubId</code>: GitHub username of the author. <span class="badge badge-danger">mandatory</span> field.</li>
                             <li><code class="hljs inline no-lang" v-pre>emails</code>: Associated GitHub emails of the author. This can be found in your <a href="https://github.com/settings/emails">GitHub settings</a>.</li>
                             <li><code class="hljs inline no-lang" v-pre>displayName</code>: Name to display on the report for this author.</li>
-                            <li><code class="hljs inline no-lang" v-pre>authorNames</code>: Git Author Name(s) used in the author's commits. By default RepoSense assumes an author would use her GitHub username as the Git username too. The meaning of <em>Git Author Name</em> is explained in <a href="#a-note-about-git-author-name"><em>A note about git author name</em></a>.</li>
+                            <li><code class="hljs inline no-lang" v-pre>authorNames</code>: Git Author Name(s) used in the author's commits. By default, RepoSense assumes an author would use her GitHub username as the Git username too. The meaning of <em>Git Author Name</em> is explained in <a href="#a-note-about-git-author-name"><em>A note about git author name</em></a>.</li>
                             <li><code class="hljs inline no-lang" v-pre>ignoreGlobList</code>: <em>Additional</em> (i.e. on top of the repo-level <code class="hljs inline no-lang" v-pre>ignoreGlobList</code>) folders/files to ignore for a specific author . In the example above, the actual <code class="hljs inline no-lang" v-pre>ignoreGlobList</code> for <code class="hljs inline no-lang" v-pre>alice</code> would be <code class="hljs inline no-lang" v-pre>[&quot;about-us/**&quot;, &quot;**index.html&quot;, &quot;**.css&quot;]</code></li>
                           </ul>
                           <p>To verify your standalone configuration is as intended, add the <code class="hljs inline no-lang" v-pre>_reposense/config.json</code> to your local copy of repo and run RepoSense against it as follows:<br></p>
                           <ul>
-                            <li>Format : <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repo LOCAL_REPO_LOCATION</code> <br></li>
+                            <li>Format: <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repo LOCAL_REPO_LOCATION</code> <br></li>
                             <li>Example: <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repo c:/myRepose/foo/bar</code><br>
                               After that, view the report to see if the configuration you specified in the config file is being reflected correctly in the report.</li>
                           </ul>
@@ -800,10 +801,10 @@
                               <box>
                                 <p><strong>Examples</strong>:</p>
                                 <p>An example of a command using most parameters:<br>
-                                  <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repo https://github.com/reposense/RepoSense.git --output ./report_folder --since 31/1/2017 --until 31/12/2018 --formats java adoc xml --view --ignore-standalone-config --last-modified-date --timezone UTC+08</code>
+                                  <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repos https://github.com/reposense/RepoSense.git --output ./report_folder --since 31/1/2017 --until 31/12/2018 --formats java adoc xml --view --ignore-standalone-config --last-modified-date --timezone UTC+08</code>
                                 </p>
                                 <p>Same command as above but using most parameters in alias format:<br>
-                                  <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar -r https://github.com/reposense/RepoSense.git -o ./report_folder -s 31/1/2017 -u 31/12/2018 -f java adoc xml -v -i -l</code>
+                                  <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar -r https://github.com/reposense/RepoSense.git -o ./report_folder -s 31/1/2017 -u 31/12/2018 -f java adoc xml -v -i -l -t UTC+08</code>
                                 </p>
                               </box>
                               <p></p>
@@ -819,7 +820,7 @@
                                 </ul>
                                 <box type="info" seamless>
                                   <ul>
-                                    <li>If <code class="hljs inline no-lang" v-pre>--assets</code> is not specified, Reposense looks for assets in the <code class="hljs inline no-lang" v-pre>./assets</code> directory.
+                                    <li>If <code class="hljs inline no-lang" v-pre>--assets</code> is not specified, RepoSense looks for assets in the <code class="hljs inline no-lang" v-pre>./assets</code> directory.
                                     </li>
                                   </ul>
                                 </box>
@@ -835,7 +836,7 @@
                                 </ul>
                                 <box type="info" seamless>
                                   <ul>
-                                    <li>Cannot be used with <code class="hljs inline no-lang" v-pre>--repos</code></li>
+                                    <li>Cannot be used with <code class="hljs inline no-lang" v-pre>--repos</code>.</li>
                                     <li>If both <code class="hljs inline no-lang" v-pre>--repos</code> and <code class="hljs inline no-lang" v-pre>--config</code> are not specified, RepoSense looks for config files in the <code class="hljs inline no-lang" v-pre>./config</code> directory.
                                     </li>
                                   </ul>
@@ -845,7 +846,7 @@
                               <h3 id="formats-f-2"><span id="formats-f-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--formats</code>, <code class="hljs inline no-lang" v-pre>-f</code><a class="fa fa-anchor" href="#formats-f-2" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--formats LIST_OF_FORMATS</code></strong>: Specifies which file extensions to be included in the analysis.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>LIST_OF_FORMATS</code> a space-separated list of file extensions that should be included in the analysis<br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>LIST_OF_FORMATS</code> A space-separated list of file extensions that should be included in the analysis.<br>
                                   Default: all file formats</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-f</code></li>
                                 <li>Example:<code class="hljs inline no-lang" v-pre>--formats css fxml gradle</code> or <code class="hljs inline no-lang" v-pre>-f css fxml gradle</code></li>
@@ -857,7 +858,7 @@
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-h</code></li>
                               </ul>
                               <box type="info" seamless>
-                                <p>Cannot be used with any other flags
+                                <p>Cannot be used with any other flags.
                                 </p>
                               </box>
                               <p></p>
@@ -876,7 +877,7 @@
                               <p></p>
 
                               <h3 id="last-modified-date-l-2"><span id="last-modified-date-l-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--last-modified-date</code>, <code class="hljs inline no-lang" v-pre>-l</code><a class="fa fa-anchor" href="#last-modified-date-l-2" onclick="event.stopPropagation()"></a></h3>
-                              <p><strong><code class="hljs inline no-lang" v-pre>--last-modified-date</code></strong>: Specifies that the last modified date of each line of code should be added to <code class="hljs inline no-lang" v-pre>authorship.json</code></p>
+                              <p><strong><code class="hljs inline no-lang" v-pre>--last-modified-date</code></strong>: Specifies that the last modified date of each line of code should be added to <code class="hljs inline no-lang" v-pre>authorship.json</code>.</p>
                               <ul>
                                 <li>Default: the last modified date of each line of code will not be added to <code class="hljs inline no-lang" v-pre>authorship.json</code></li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-l</code> (lowercase L)</li>
@@ -887,7 +888,7 @@
                               <h3 id="output-o-2"><span id="output-o-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--output</code>, <code class="hljs inline no-lang" v-pre>-o</code><a class="fa fa-anchor" href="#output-o-2" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--output OUTPUT_DIRECTORY</code></strong>: Indicates where to save the report generated.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>OUTPUT_DIRECTORY</code> location for the generated <code class="hljs inline no-lang" v-pre>reposense-report</code> folder<br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>OUTPUT_DIRECTORY</code> The location for the generated <code class="hljs inline no-lang" v-pre>reposense-report</code> folder.<br>
                                   Default: current directory</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-o</code></li>
                                 <li>Example: <code class="hljs inline no-lang" v-pre>--output ./foo</code> or <code class="hljs inline no-lang" v-pre>-o ./foo</code> (the report will be in the <code class="hljs inline no-lang" v-pre>./foo/reposense-report</code> folder)</li>
@@ -896,7 +897,7 @@
                               <h3 id="period-p-2"><span id="period-p-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--period</code>, <code class="hljs inline no-lang" v-pre>-p</code><a class="fa fa-anchor" href="#period-p-2" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--period PERIOD</code></strong>: Specifies the period of analysis window.</p>
                               <ul>
-                                <li>Parameter <code class="hljs inline no-lang" v-pre>PERIOD</code>: The period of analysis window, in the format <code class="hljs inline no-lang" v-pre>nd</code> (for n days) or <code class="hljs inline no-lang" v-pre>nw</code> (for n weeks). It is used to calculate end date if only start date is specified, or calculate end date if only start date is specified.</li>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>PERIOD</code> The period of analysis window, in the format <code class="hljs inline no-lang" v-pre>nd</code> (for n days) or <code class="hljs inline no-lang" v-pre>nw</code> (for n weeks). It is used to calculate end date if only start date is specified, or calculate end date if only start date is specified.</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-p</code></li>
                                 <li>Example: <code class="hljs inline no-lang" v-pre>--period 30d</code> or <code class="hljs inline no-lang" v-pre>--period 4w</code></li>
                               </ul>
@@ -912,24 +913,25 @@
                               <h3 id="repos-r-2"><span id="repos-r-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--repos</code>, <code class="hljs inline no-lang" v-pre>-r</code><a class="fa fa-anchor" href="#repos-r-2" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--repos REPO_LOCATION</code></strong>: Specifies which repositories to analyze.</p>
                               <ul>
-                                <li>Parameter <code class="hljs inline no-lang" v-pre>REPO_LOCATION</code>: A list of URLs or the disk location of the git repositories to analyze, separated by spaces.</li>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>REPO_LOCATION</code> A list of URLs or the disk location of the git repositories to analyze, separated by spaces.</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-r</code></li>
                                 <li>Examples:
                                   <ul>
                                     <li><code class="hljs inline no-lang" v-pre>--repos https://github.com/reposense/RepoSense.git</code></li>
-                                    <li><code class="hljs inline no-lang" v-pre>--repos https://github.com/reposense/RepoSense.git c:/myRepose/foo/bar</code>: analyzes the two specified repos (one remote, one local) and generates one report containing details of both</li>
+                                    <li><code class="hljs inline no-lang" v-pre>--repos https://github.com/reposense/RepoSense.git c:/myRepose/foo/bar</code>: analyzes the two specified repos (one remote, one local) and generates one report containing details of both.</li>
                                   </ul>
                                 </li>
                               </ul>
                               <box type="info" seamless>
-                                <p>Cannot be used with <code class="hljs inline no-lang" v-pre>--config</code></p>
+                                <p>Cannot be used with <code class="hljs inline no-lang" v-pre>--config</code>.
+                                </p>
                               </box>
                               <p></p>
 
                               <h3 id="since-s-2"><span id="since-s-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--since</code>, <code class="hljs inline no-lang" v-pre>-s</code><a class="fa fa-anchor" href="#since-s-2" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--since START_DATE</code></strong>: Specifies the start date for the period to be analyzed.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>START_DATE</code> the first day of the period to be analyzed, in the format <code class="hljs inline no-lang" v-pre>DD/MM/YYYY</code><br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>START_DATE</code> The first day of the period to be analyzed, in the format <code class="hljs inline no-lang" v-pre>DD/MM/YYYY</code>.<br>
                                   Default: one month before the current date</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-s</code></li>
                                 <li>Example:<code class="hljs inline no-lang" v-pre>--since 21/10/2017</code> or <code class="hljs inline no-lang" v-pre>-s 21/10/2017</code></li>
@@ -946,7 +948,7 @@
                               <h3 id="timezone-t-2"><span id="timezone-t-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--timezone</code>, <code class="hljs inline no-lang" v-pre>-t</code><a class="fa fa-anchor" href="#timezone-t-2" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--timezone ZONE_ID</code></strong>: Indicates the timezone to be used for the analysis.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>ZONE_ID</code> timezones in the format <code class="hljs inline no-lang" v-pre>ZONE_ID[±hh[mm]]</code><br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>ZONE_ID</code> The timezone in the format <code class="hljs inline no-lang" v-pre>ZONE_ID[±hh[mm]]</code>.<br>
                                   Default: system's default timezone</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-t</code></li>
                                 <li>Example:<code class="hljs inline no-lang" v-pre>--timezone UTC+08</code> or <code class="hljs inline no-lang" v-pre>-t UTC-1030</code></li>
@@ -955,7 +957,7 @@
                               <h3 id="until-u-2"><span id="until-u-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--until</code>, <code class="hljs inline no-lang" v-pre>-u</code><a class="fa fa-anchor" href="#until-u-2" onclick="event.stopPropagation()"></a></h3>
                               <p><strong><code class="hljs inline no-lang" v-pre>--until END_DATE</code></strong>: Specifies the end date of the analysis period.</p>
                               <ul>
-                                <li>Parameter: <code class="hljs inline no-lang" v-pre>END_DATE</code> The last date of the period to be analyzed, in the format <code class="hljs inline no-lang" v-pre>DD/MM/YYYY</code><br>
+                                <li>Parameter: <code class="hljs inline no-lang" v-pre>END_DATE</code> The last date of the period to be analyzed, in the format <code class="hljs inline no-lang" v-pre>DD/MM/YYYY</code>.<br>
                                   Default: current date</li>
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-u</code></li>
                                 <li>Example:<code class="hljs inline no-lang" v-pre>--until 21/10/2017</code> or <code class="hljs inline no-lang" v-pre>-u 21/10/2017</code></li>
@@ -972,13 +974,13 @@
                                 <li>Alias: <code class="hljs inline no-lang" v-pre>-V</code> (upper case)</li>
                               </ul>
                               <box type="info" seamless>
-                                <p>Cannot be used with any other flags
+                                <p>Cannot be used with any other flags.
                                 </p>
                               </box>
                               <p></p>
 
                               <h3 id="view-v-2"><span id="view-v-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>--view</code>, <code class="hljs inline no-lang" v-pre>-v</code><a class="fa fa-anchor" href="#view-v-2" onclick="event.stopPropagation()"></a></h3>
-                              <p><strong><code class="hljs inline no-lang" v-pre>--view [REPORT_FOLDER]</code></strong>: Specifies the report should be opened in the default browser.</p>
+                              <p><strong><code class="hljs inline no-lang" v-pre>--view [REPORT_FOLDER]</code></strong>: Specifies that the report should be opened in the default browser.</p>
                               <ul>
                                 <li>Parameter: <code class="hljs inline no-lang" v-pre>REPORT_FOLDER</code> Optional. If specified, no analysis will be performed and the report specified by the argument will be opened.<br>
                                   Default: <code class="hljs inline no-lang" v-pre>./reposense-report</code></li>
@@ -1018,7 +1020,7 @@
                         </box>
                         <p></p>
                         <box type="info" seamless>
-                          <p><strong>A value in a config file is optional to provide unless it specified as <span class="badge badge-danger">mandatory</span></strong>.
+                          <p><strong>A value in a config file is optional to provide unless it is specified as <span class="badge badge-danger">mandatory</span></strong>.
                           </p>
                         </box>
                         <p></p>
@@ -1040,7 +1042,7 @@
                               </tr>
                               <tr>
                                 <td>Branch</td>
-                                <td>The branch to analyze in the target repository e.g., <code class="hljs inline no-lang" v-pre>master</code>. Default: the default branch of the repo</td>
+                                <td>The branch to analyze in the target repository, e.g., <code class="hljs inline no-lang" v-pre>master</code>. Default: the default branch of the repo</td>
                               </tr>
                               <tr>
                                 <td>File formats<sup>*+</sup></td>
@@ -1048,15 +1050,15 @@
                               </tr>
                               <tr>
                                 <td>Ignore Glob List<sup>*+</sup></td>
-                                <td>The list of file path globs to ignore during analysis for each author. e.g., <code class="hljs inline no-lang" v-pre>test/**;temp/**</code></td>
+                                <td>The list of file path globs to ignore during analysis for each author, e.g., <code class="hljs inline no-lang" v-pre>test/**;temp/**</code></td>
                               </tr>
                               <tr>
                                 <td>Ignore standalone config</td>
-                                <td>To ignore the standalone config file (if any) in target repository, enter <strong><code class="hljs inline no-lang" v-pre>yes</code></strong>. If the cell is empty, the standalone config file in the repo (if any) will take precedence over configurations provided in the csv files.</td>
+                                <td>To ignore the standalone config file (if any) in the target repository, enter <strong><code class="hljs inline no-lang" v-pre>yes</code></strong>. If the cell is empty, the standalone config file in the repo (if any) will take precedence over configurations provided in the csv files.</td>
                               </tr>
                               <tr>
                                 <td>Ignore Commit List<sup>*+</sup></td>
-                                <td>The list of commits to ignore during analysis. For accurate results, the commits should be provided with their full hash. Additionally, a range of commits can be specified using the <code class="hljs inline no-lang" v-pre>..</code> notation e.g. <code class="hljs inline no-lang" v-pre>abc123..def456</code> (both inclusive).</td>
+                                <td>The list of commits to ignore during analysis. For accurate results, the commits should be provided with their full hash. Additionally, a range of commits can be specified using the <code class="hljs inline no-lang" v-pre>..</code> notation, e.g., <code class="hljs inline no-lang" v-pre>abc123..def456</code> (both inclusive).</td>
                               </tr>
                               <tr>
                                 <td>Ignore Authors List<sup>*+</sup></td>
@@ -1075,7 +1077,7 @@
                         <p></p>
 
                         <h2 id="author-config-csv-2"><span id="author-config-csv-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>author-config.csv</code><a class="fa fa-anchor" href="#author-config-csv-2" onclick="event.stopPropagation()"></a></h2>
-                        <p>Optionally, you can use a <code class="hljs inline no-lang" v-pre>author-config.csv</code> (which should be in the same directory as <code class="hljs inline no-lang" v-pre>repo-config.csv</code> file) to provide more details about the authors to analyze (<a href="/RepoSense/ug/author-config.csv">example</a>). It should contain the following columns:</p>
+                        <p>Optionally, you can use an <code class="hljs inline no-lang" v-pre>author-config.csv</code> (which should be in the same directory as the <code class="hljs inline no-lang" v-pre>repo-config.csv</code> file) to provide more details about the authors to analyze (<a href="/RepoSense/ug/author-config.csv">example</a>). It should contain the following columns:</p>
                         <div class="table-responsive">
                           <table class="markbind-table table table-bordered table-striped">
                             <thead>
@@ -1091,11 +1093,11 @@
                               </tr>
                               <tr>
                                 <td>Branch</td>
-                                <td>The branch to analyze for this author e.g., <code class="hljs inline no-lang" v-pre>master</code>. Default: the author will be bound to all the repos in <code class="hljs inline no-lang" v-pre>repo-config.csv</code> that has the same repo's location, irregardless of branch</td>
+                                <td>The branch to analyze for this author, e.g., <code class="hljs inline no-lang" v-pre>master</code>. Default: the author will be bound to all the repos in <code class="hljs inline no-lang" v-pre>repo-config.csv</code> that has the same repo's location, regardless of branch.</td>
                               </tr>
                               <tr>
                                 <td>Author's GitHub ID <span class="badge badge-danger">mandatory</span></td>
-                                <td>GitHub username of the target author e.g., <code class="hljs inline no-lang" v-pre>JohnDoe</code></td>
+                                <td>GitHub username of the target author, e.g., <code class="hljs inline no-lang" v-pre>JohnDoe</code></td>
                               </tr>
                               <tr>
                                 <td>Author's Emails<sup>*</sup></td>
@@ -1117,7 +1119,7 @@
                           </table>
                         </div>
                         <p><sup>* <strong>Multi-value column</strong>: multiple values can be entered in this column using a semicolon <code class="hljs inline no-lang" v-pre>;</code> as the separator.</sup></p>
-                        <p>If <code class="hljs inline no-lang" v-pre>author-config.csv</code> is not given and the repo has not provide author details in a standalone config file, all the authors of the repositories within the date range specified (if any) will be analyzed.</p>
+                        <p>If <code class="hljs inline no-lang" v-pre>author-config.csv</code> is not given and the repo has not provided author details in a standalone config file, all the authors of the repositories within the date range specified (if any) will be analyzed.</p>
 
                         <h2 id="group-config-csv-2"><span id="group-config-csv-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>group-config.csv</code><a class="fa fa-anchor" href="#group-config-csv-2" onclick="event.stopPropagation()"></a></h2>
                         <p>Optionally, you can provide a <code class="hljs inline no-lang" v-pre>group-config.csv</code>(which should be in the same directory as <code class="hljs inline no-lang" v-pre>repo-config.csv</code> file) to provide details on any custom groupings for files in specified repositories (<a href="/RepoSense/ug/group-config.csv">example</a>). It should contain the following columns:</p>
@@ -1136,21 +1138,21 @@
                               </tr>
                               <tr>
                                 <td>Group Name <span class="badge badge-danger">mandatory</span></td>
-                                <td>Name of the group e.g.,<code class="hljs inline no-lang" v-pre>test</code>.</td>
+                                <td>Name of the group, e.g.,<code class="hljs inline no-lang" v-pre>test</code>.</td>
                               </tr>
                               <tr>
                                 <td>Globs * <span class="badge badge-danger">mandatory</span></td>
-                                <td>The list of file path globs to include for specified group. e.g.,<code class="hljs inline no-lang" v-pre>**/test/*;**.java</code>.</td>
+                                <td>The list of file path globs to include for specified group, e.g.,<code class="hljs inline no-lang" v-pre>**/test/*;**.java</code>.</td>
                               </tr>
                             </tbody>
                           </table>
                         </div>
                         <p><sup>* <strong>Multi-value column</strong>: multiple values can be entered in this column using a semicolon <code class="hljs inline no-lang" v-pre>;</code> as the separator.</sup></p>
                         <p>Note that a file in a given repository should only be tagged to one group. <br>
-                          e.g.: <code class="hljs inline no-lang" v-pre>example.java</code> in <code class="hljs inline no-lang" v-pre>example-repo</code> can either be in <code class="hljs inline no-lang" v-pre>test</code> group or in <code class="hljs inline no-lang" v-pre>code</code> group, but not in both <code class="hljs inline no-lang" v-pre>test</code> and <code class="hljs inline no-lang" v-pre>code</code> group. If multiple groups are specified for a given file, the latter group (i.e.: <code class="hljs inline no-lang" v-pre>code</code> group) is set for the file.</p>
+                          e.g.: <code class="hljs inline no-lang" v-pre>example.java</code> in <code class="hljs inline no-lang" v-pre>example-repo</code> can either be in the <code class="hljs inline no-lang" v-pre>test</code> group or the <code class="hljs inline no-lang" v-pre>code</code> group, but not in both <code class="hljs inline no-lang" v-pre>test</code> and <code class="hljs inline no-lang" v-pre>code</code> group. If multiple groups are specified for a given file, the latter group (i.e., <code class="hljs inline no-lang" v-pre>code</code> group) is set for the file.</p>
 
                         <h2 id="report-config-json-2"><span id="report-config-json-2" class="anchor"></span><code class="hljs inline no-lang" v-pre>report-config.json</code><a class="fa fa-anchor" href="#report-config-json-2" onclick="event.stopPropagation()"></a></h2>
-                        <p>You can optionally use <code class="hljs inline no-lang" v-pre>report-config.json</code> to customize report generation by providing the following information . (<a href="/RepoSense/ug/report-config.csv">example</a>)</p>
+                        <p>You can optionally use <code class="hljs inline no-lang" v-pre>report-config.json</code> to customize report generation by providing the following information. (<a href="/RepoSense/ug/report-config.csv">example</a>)</p>
                         <p><strong>Fields to provide</strong>:</p>
                         <ul>
                           <li><code class="hljs inline no-lang" v-pre>title</code>: Title of the generated report, which is also the title of the deployed dashboard. Default: &quot;RepoSense Report&quot;</li>
@@ -1199,12 +1201,12 @@
                             <li><code class="hljs inline no-lang" v-pre>githubId</code>: GitHub username of the author. <span class="badge badge-danger">mandatory</span> field.</li>
                             <li><code class="hljs inline no-lang" v-pre>emails</code>: Associated GitHub emails of the author. This can be found in your <a href="https://github.com/settings/emails">GitHub settings</a>.</li>
                             <li><code class="hljs inline no-lang" v-pre>displayName</code>: Name to display on the report for this author.</li>
-                            <li><code class="hljs inline no-lang" v-pre>authorNames</code>: Git Author Name(s) used in the author's commits. By default RepoSense assumes an author would use her GitHub username as the Git username too. The meaning of <em>Git Author Name</em> is explained in <a href="#a-note-about-git-author-name"><em>A note about git author name</em></a>.</li>
+                            <li><code class="hljs inline no-lang" v-pre>authorNames</code>: Git Author Name(s) used in the author's commits. By default, RepoSense assumes an author would use her GitHub username as the Git username too. The meaning of <em>Git Author Name</em> is explained in <a href="#a-note-about-git-author-name"><em>A note about git author name</em></a>.</li>
                             <li><code class="hljs inline no-lang" v-pre>ignoreGlobList</code>: <em>Additional</em> (i.e. on top of the repo-level <code class="hljs inline no-lang" v-pre>ignoreGlobList</code>) folders/files to ignore for a specific author . In the example above, the actual <code class="hljs inline no-lang" v-pre>ignoreGlobList</code> for <code class="hljs inline no-lang" v-pre>alice</code> would be <code class="hljs inline no-lang" v-pre>[&quot;about-us/**&quot;, &quot;**index.html&quot;, &quot;**.css&quot;]</code></li>
                           </ul>
                           <p>To verify your standalone configuration is as intended, add the <code class="hljs inline no-lang" v-pre>_reposense/config.json</code> to your local copy of repo and run RepoSense against it as follows:<br></p>
                           <ul>
-                            <li>Format : <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repo LOCAL_REPO_LOCATION</code> <br></li>
+                            <li>Format: <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repo LOCAL_REPO_LOCATION</code> <br></li>
                             <li>Example: <code class="hljs inline no-lang" v-pre>java -jar RepoSense.jar --repo c:/myRepose/foo/bar</code><br>
                               After that, view the report to see if the configuration you specified in the config file is being reflected correctly in the report.</li>
                           </ul>
@@ -1387,7 +1389,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, Feb 2, 2021, 1:06:09 PM UTC]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Thu, Feb 11, 2021, 1:45:18 PM UTC]</small>
       </div>
     </footer>
   </div>
