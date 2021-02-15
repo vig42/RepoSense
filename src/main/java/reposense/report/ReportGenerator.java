@@ -118,10 +118,10 @@ public class ReportGenerator {
 
         Optional<Path> summaryPath = FileUtil.writeJsonFile(
                 new SummaryJson(configs, reportConfig, generationDate,
-                        TimeUtil.getZonedDateFromSystemDate(reportSinceDate, zoneId),
-                        TimeUtil.getZonedDateFromSystemDate(untilDate, zoneId), isSinceDateProvided,
-                        isUntilDateProvided, RepoSense.getVersion(), ErrorSummary.getInstance().getErrorList(),
-                        reportGenerationTimeProvider.get(), zoneId.toString()),
+                TimeUtil.getZonedDateFromSystemDate(reportSinceDate, zoneId),
+                TimeUtil.getZonedDateFromSystemDate(untilDate, zoneId), isSinceDateProvided,
+                isUntilDateProvided, RepoSense.getVersion(), ErrorSummary.getInstance().getErrorList(),
+                reportGenerationTimeProvider.get(), zoneId.toString()),
                 getSummaryResultPath(outputPath));
         summaryPath.ifPresent(reportFoldersAndFiles::add);
 
@@ -227,7 +227,7 @@ public class ReportGenerator {
             Path repoReportDirectory = Paths.get(outputPath, configToAnalyze.getOutputFolderName());
             logger.info(
                     String.format(progressTracker.getProgress() + " "
-                            + MESSAGE_START_ANALYSIS, configToAnalyze.getLocation(), configToAnalyze.getBranch()));
+                    + MESSAGE_START_ANALYSIS, configToAnalyze.getLocation(), configToAnalyze.getBranch()));
             try {
                 GitRevParse.assertBranchExists(configToAnalyze, FileUtil.getBareRepoPath(configToAnalyze));
                 GitLsTree.validateFilePaths(configToAnalyze, FileUtil.getBareRepoPath(configToAnalyze));

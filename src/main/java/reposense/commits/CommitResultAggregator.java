@@ -38,7 +38,7 @@ public class CommitResultAggregator {
 
         Map<Author, List<AuthorDailyContribution>> authorDailyContributionsMap =
                 getAuthorDailyContributionsMap(config.getAuthorDisplayNameMap().keySet(), commitResults,
-                        config.getZoneId());
+                config.getZoneId());
 
         Date lastDate = commitResults.size() == 0
                 ? null
@@ -111,7 +111,7 @@ public class CommitResultAggregator {
 
             if (authorDailyContributions.isEmpty()
                     || !authorDailyContributions.get(authorDailyContributions.size() - 1).getDate()
-                            .equals(commitStartDate)) {
+                    .equals(commitStartDate)) {
                 addDailyContributionForNewDate(authorDailyContributions, commitStartDate);
             }
 

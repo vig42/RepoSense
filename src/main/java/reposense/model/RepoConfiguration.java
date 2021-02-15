@@ -92,7 +92,7 @@ public class RepoConfiguration {
     }
 
     public static void setIsLastModifiedDateIncludedToRepoConfigs(List<RepoConfiguration> configs,
-                                                                  boolean isLastModifiedDateIncluded) {
+            boolean isLastModifiedDateIncluded) {
         for (RepoConfiguration config : configs) {
             config.setIsLastModifiedDateIncluded(isLastModifiedDateIncluded);
         }
