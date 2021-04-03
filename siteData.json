@@ -75,6 +75,7 @@
       "headings": {
         "project-management": "Project management",
         "merging-prs": "Merging PRs",
+        "making-a-release-on-github": "Making a release on Github",
         "deploying-the-production-website": "Deploying the production website"
       },
       "headingKeywords": {}
@@ -174,6 +175,7 @@
         "output-o": "--output, -o",
         "period-p": "--period, -p",
         "repos-r": "--repos, -r",
+        "shallow-cloning-s": "--shallow-cloning, -S",
         "since-s": "--since, -s",
         "timezone-t": "--timezone, -t",
         "until-u": "--until, -u",
